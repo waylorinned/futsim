@@ -817,7 +817,7 @@ function RetirementScreen({ player, onRestart }: { player: Player; onRestart: ()
 }
 
 /* ─── Main App ─── */
-export default function App() {
+export function App() {
   const [screen, setScreen] = useState<GameScreen>('menu');
   const [player, setPlayer] = useState<Player | null>(null);
   const [match, setMatch] = useState<MatchState | null>(null);
