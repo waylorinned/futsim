@@ -25,7 +25,7 @@ function StatBar({ value, max = 99, color = '#10b981' }: { value: number; max?: 
 
 /* ─── Helper: Overall Badge ─── */
 function OverallBadge({ player }: { player: Player }) {
-  const ovr = calculateOverall(player.stats, player.position);
+  const ovr = calculateOverall(playe.stats, player.position);
   const color = ovr >= 85 ? 'text-yellow-400' : ovr >= 70 ? 'text-emerald-400' : ovr >= 55 ? 'text-blue-400' : 'text-gray-400';
   return (
     <div className="flex flex-col items-center">
@@ -37,7 +37,7 @@ function OverallBadge({ player }: { player: Player }) {
 
 /* ─── Helper: Player Card Header ─── */
 function PlayerCardHeader({ player }: { player: Player }) {
-  export const club = getClubById(player.clubId);
+  const club = getClubById(player.clubId);
   return (
     <div className="bg-gradient-to-r from-slate-800 to-slate-900 rounded-2xl p-5 border border-slate-700">
       <div className="flex items-center gap-5">
@@ -1015,3 +1015,4 @@ export default function App() {
       );
   }
 }
+export { clubs, matchSituations, getClubById, getClubsByTier };
