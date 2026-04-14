@@ -1015,4 +1015,4 @@ export default function App() {
       );
   }
 }
-export { clubs, matchSituations, getClubById, getClubsByTier };
+export { clubs, matchSituations, getClubById, getClubsByTier }; 
