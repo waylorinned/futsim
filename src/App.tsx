@@ -3,7 +3,7 @@ import { Player, PlayerStats, Position, MatchState, TransferOffer, Trophy, GameS
 import {
   getClubById, positionNames, positionEmoji,
   statNames, statEmoji, leagueNames, tierColors,
-} from './data';
+} from './data.tsx';
 import {
   calculateOverall, createPlayer, startMatch, processChoice,
   finishMatch, calculateMatchRating, applyMatchResult,
