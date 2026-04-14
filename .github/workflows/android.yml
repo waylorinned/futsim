@@ -13,10 +13,10 @@ jobs:
           node-version: 20
 
       - name: Install Dependencies
-        run: npm install
+        run: npm install --legacy-peer-deps
 
       - name: Build Web Project
-        run: npm run build
+        run: CI=false npm run build
 
       - name: Setup Java
         uses: actions/setup-java@v4
@@ -24,15 +24,12 @@ jobs:
           distribution: 'zulu'
           java-version: '17'
 
-      - name: Setup Android Project (Capacitor)
+      - name: Build APK (Simplified)
         run: |
           npm install @capacitor/core @capacitor/cli @capacitor/android
           npx cap init "FutSim" "com.futsim.game" --web-dir dist
           npx cap add android
           npx cap copy android
-
-      - name: Build APK
-        run: |
           cd android
           chmod +x gradlew
           ./gradlew assembleDebug
