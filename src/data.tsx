@@ -23,6 +23,8 @@ function StatBar({ value, max = 99, color = '#10b981' }: { value: number; max?: 
   );
 }
 
+export { clubs, matchSituations, getClubById, getClubsByTier };
+
 /* ─── Helper: Overall Badge ─── */
 function OverallBadge({ player }: { player: Player }) {
   const ovr = calculateOverall(playe.stats, player.position);
@@ -1015,4 +1017,3 @@ export default function App() {
       );
   }
 }
-export { clubs, matchSituations, getClubById, getClubsByTier };
