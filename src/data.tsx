@@ -23,7 +23,7 @@ function StatBar({ value, max = 99, color = '#10b981' }: { value: number; max?: 
   );
 }
 
-export { clubs, matchSituations, getClubById, getClubsByTier };
+export { club, matchSituations, getClubById, getClubsByTier };
 
 /* ─── Helper: Overall Badge ─── */
 function OverallBadge({ player }: { player: Player }) {
