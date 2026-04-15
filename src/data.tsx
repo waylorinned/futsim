@@ -1,10 +1,6 @@
 import { useState, useCallback } from 'react';
 import { Player, PlayerStats, Position, MatchState, TransferOffer, Trophy, GameScreen } from './types';
 import {
-  getClubById, positionNames, positionEmoji,
-  statNames, statEmoji, leagueNames, tierColors,
-} from './data';
-import {
   calculateOverall, createPlayer, startMatch, processChoice,
   finishMatch, calculateMatchRating, applyMatchResult,
   trainStat, generateTransferOffers, endSeason, acceptTransfer,
