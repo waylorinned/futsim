@@ -37,7 +37,7 @@ function OverallBadge({ player }: { player: Player }) {
 
 /* ─── Helper: Player Card Header ─── */
 function PlayerCardHeader({ player }: { player: Player }) {
-  export const club = getClubById(player.clubId);
+  const club = getClubById(player.clubId);
   return (
     <div className="bg-gradient-to-r from-slate-800 to-slate-900 rounded-2xl p-5 border border-slate-700">
       <div className="flex items-center gap-5">
