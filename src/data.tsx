@@ -1,4 +1,3 @@
-import { useState, useCallback } from 'react';
 import { Player, PlayerStats, Position, MatchState, TransferOffer, Trophy, GameScreen } from './types';
 import {
   calculateOverall, createPlayer, startMatch, processChoice,
