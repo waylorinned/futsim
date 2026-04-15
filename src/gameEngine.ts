@@ -1,5 +1,5 @@
 import { Player, PlayerStats, Position, MatchState, GeneratedEvent, TransferOffer, Club, Trophy } from './types';
-import { club, getClubsByTier } from './data.tsx';
+import { club } from './data.tsx';
 
 export function calculateOverall(stats: PlayerStats, position: Position): number {
   const weights: Record<Position, Record<keyof PlayerStats, number>> = {
